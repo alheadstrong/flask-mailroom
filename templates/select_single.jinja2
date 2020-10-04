@@ -1,0 +1,13 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}Select Donor{% endblock subtitle %}
+
+{% block content %}
+<form method="POST">
+<ul>
+    {% for donor in donors %}
+        <li><input type="submit" value={{ donor.name }} name="name"></li>
+    {% endfor %}
+</ul>
+</form>
+{% endblock content %}
